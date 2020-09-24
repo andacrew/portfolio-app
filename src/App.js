@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { DarkMode } from './components/darkMode';
+import { Header } from './Header';
+import { Home } from './pages/Home';
+import { Portfolio } from './pages/Portfolio';
+import { Contact } from './pages/Contact';
+
 
 function App() {
+  const [theme, btnColor, themeToggler, mountedComponent] = DarkMode();
+  const [page, setPage] = useState('home');
+
+  if(!mountedComponent) return <div/>
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={theme}>
+      <Header theme={theme} themeToggler={themeToggler} btnColor={btnColor} setPage={setPage}/>
+      {
+        {
+          'home': <Home />,
+          'portfolio': <Portfolio btnColor={btnColor} />,
+          'contact': <Contact btnColor={btnColor} />
+        }[page]
+      }
     </div>
   );
 }
