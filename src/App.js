@@ -6,7 +6,6 @@ import { Home } from './pages/Home';
 import { Portfolio } from './pages/Portfolio';
 import { Contact } from './pages/Contact';
 
-
 function App() {
   const [theme, btnColor, themeToggler, mountedComponent] = DarkMode();
   const [page, setPage] = useState('home');
