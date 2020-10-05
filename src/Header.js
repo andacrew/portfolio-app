@@ -17,7 +17,7 @@ export const Header = (props) => {
           <Nav.Link onClick={() => setPage('home')}>Home</Nav.Link>
           <Nav.Link onClick={()=> setPage('portfolio')}>Portfolio</Nav.Link>
           <Nav.Link onClick={()=> setPage('contact')}>Contact</Nav.Link>
-          <Nav.Link href="#resume">Resume</Nav.Link>
+          <Nav.Link onClick={()=> setPage('resume')}>Resume</Nav.Link>
           <Nav.Link href={`mailto:andrew.t.copas@gmail.com`}>Email me</Nav.Link>
         </Nav>
         <Button variant={btnColor} onClick={ themeToggler } className='ml-auto'>
