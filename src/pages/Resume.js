@@ -12,8 +12,8 @@ export const Resume = (props) =>  {
       <h1>Resume</h1>
       <br />
       <div>
-        <Button download variant={ btnColor } className='mr-2'>Download PDF <i class="far fa-file-pdf"></i></Button>
-        <Button download variant={ btnColor } >Download Docx <i class="far fa-file-word"></i></Button>
+        <Button href='/pdf' download variant={ btnColor } className='mr-2'>Download PDF <i className="far fa-file-pdf"></i></Button>
+        <Button href='/docx' download variant={ btnColor } >Download Docx <i className="far fa-file-word"></i></Button>
       </div>
       <br />
       <div>

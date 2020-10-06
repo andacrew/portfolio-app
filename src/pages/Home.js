@@ -13,13 +13,13 @@ export const Home = (props) =>  {
       I am currently looking for work here in the San Francisco Bay Area as a Full Stack Software Developer.
       <div>
         <Button href='https://www.github.com/andacrew' target='_blank' rel="noopener noreferrer" variant={ btnColor } className='mr-2' size='lg'>
-          <i class="fab fa-github"></i>
+          <i className="fab fa-github"></i>
         </Button>
         <Button href='https://www.linkedin.com/in/andrew-copas/' target='_blank' rel="noopener noreferrer" variant={ btnColor } className='mr-2' size='lg'>
-          <i class="fab fa-linkedin-in"></i>
+          <i className="fab fa-linkedin-in"></i>
         </Button>
         <Button href={`mailto:andrew.t.copas@gmail.com`} variant={ btnColor } size='lg'>
-          <i class="far fa-envelope"></i>
+          <i className="far fa-envelope"></i>
         </Button>
       </div>
     </div>
