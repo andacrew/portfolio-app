@@ -4,7 +4,6 @@ import { DarkMode } from './components/darkMode';
 import { Header } from './Header';
 import { Home } from './pages/Home';
 import { Portfolio } from './pages/Portfolio';
-import { Contact } from './pages/Contact';
 import { Resume } from './pages/Resume';
 import resumePDF from './download/AndrewCopasResume.pdf';
 
@@ -19,8 +18,7 @@ function App() {
       {
         {
           'home': <Home btnColor={btnColor}/>,
-          'portfolio': <Portfolio btnColor={btnColor} />,
-          'contact': <Contact btnColor={btnColor} />,
+          'portfolio': <Portfolio btnColor={btnColor} theme={theme} />,
           'resume': <Resume resumePDF={resumePDF} btnColor={btnColor} />
         }[page]
       }

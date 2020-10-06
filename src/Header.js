@@ -16,7 +16,6 @@ export const Header = (props) => {
         <Nav className="mr-auto">
           <Nav.Link onClick={() => setPage('home')}>Home</Nav.Link>
           <Nav.Link onClick={()=> setPage('portfolio')}>Portfolio</Nav.Link>
-          <Nav.Link onClick={()=> setPage('contact')}>Contact</Nav.Link>
           <Nav.Link onClick={()=> setPage('resume')}>Resume</Nav.Link>
         </Nav>
         <Button variant={btnColor} onClick={ themeToggler } className='ml-auto'>
