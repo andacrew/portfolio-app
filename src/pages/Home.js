@@ -11,17 +11,6 @@ export const Home = (props) =>  {
       My name is Andrew and I am a recent Graduate from
       San Francisco State University with a Bachelor of Science in Computer Science.
       I am currently looking for work here in the San Francisco Bay Area as a Full Stack Software Developer.
-      <div>
-        <Button href='https://www.github.com/andacrew' target='_blank' rel="noopener noreferrer" variant={ btnColor } className='mr-2' size='lg'>
-          <i className="fab fa-github"></i>
-        </Button>
-        <Button href='https://www.linkedin.com/in/andrew-copas/' target='_blank' rel="noopener noreferrer" variant={ btnColor } className='mr-2' size='lg'>
-          <i className="fab fa-linkedin-in"></i>
-        </Button>
-        <Button href={`mailto:andrew.t.copas@gmail.com`} variant={ btnColor } size='lg'>
-          <i className="far fa-envelope"></i>
-        </Button>
-      </div>
     </div>
   );
 }
