@@ -1,9 +1,6 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 
 export const Home = (props) =>  {
-  const btnColor = props.btnColor;
-
   return(
     <div className='container'>
       <h1>Welcome</h1>

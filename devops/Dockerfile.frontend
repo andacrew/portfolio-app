@@ -1,0 +1,14 @@
+FROM node:12-alpine
+
+WORKDIR /main
+
+COPY ./package.json /main
+
+RUN npm install
+
+COPY ./public /main/public
+COPY ./src /main/src
+
+RUN npm run build
+
+CMD ["npm", "start"]

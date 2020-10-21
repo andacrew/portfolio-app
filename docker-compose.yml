@@ -1,0 +1,28 @@
+version: "3"
+services:
+  react-app:
+    image: andacrew/portfolio-frontend
+    stdin_open: true
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "3000:3000"
+    networks: 
+      - portfolio-app
+  api-server:
+    image: andacrew/portfolio-server
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "4000:4000"
+    networks: 
+      - portfolio-app
+    environment:
+      - FRONT_END_HOST=http://react-app:3000
+networks: 
+  portfolio-app:
+    driver: bridge

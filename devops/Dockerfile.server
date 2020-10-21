@@ -1,0 +1,14 @@
+FROM node:12-alpine
+
+WORKDIR /main
+
+COPY ./package.json /main
+
+RUN npm install
+
+COPY ./src/server.js /main
+COPY ./src/download /main/download
+
+EXPOSE 4000
+
+CMD [ "node", "server.js" ]

@@ -17,7 +17,7 @@ function App() {
       <Header theme={theme} themeToggler={themeToggler} btnColor={btnColor} setPage={setPage}/>
       {
         {
-          'home': <Home btnColor={btnColor}/>,
+          'home': <Home />,
           'portfolio': <Portfolio btnColor={btnColor} theme={theme} />,
           'resume': <Resume resumePDF={resumePDF} btnColor={btnColor} />
         }[page]
