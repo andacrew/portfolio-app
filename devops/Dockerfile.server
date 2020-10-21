@@ -6,7 +6,7 @@ COPY ./package.json /main
 
 RUN npm install
 
-COPY ./src/server.js /main
+COPY ./server/server.js /main
 COPY ./src/download /main/download
 
 EXPOSE 4000

@@ -8,7 +8,10 @@ RUN npm install
 
 COPY ./public /main/public
 COPY ./src /main/src
+COPY ./server/frontend.js /main/server/frontend.js
 
 RUN npm run build
 
-CMD ["npm", "start"]
+EXPOSE 3000
+
+CMD ["node", "server/frontend.js"]

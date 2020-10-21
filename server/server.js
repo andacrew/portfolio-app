@@ -22,7 +22,7 @@ app.get('/pdf', function(req, res){
   res.download(file, 'AndrewCopasResume.pdf');
 });
 
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
   apiProxy.web(req, res, { target: fronEndHost });
 });
 
