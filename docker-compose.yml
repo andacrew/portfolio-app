@@ -18,7 +18,7 @@ services:
       restart_policy:
         condition: on-failure
     ports:
-      - "4000:4000"
+      - "80:4000"
     networks: 
       - portfolio-app
     environment:
